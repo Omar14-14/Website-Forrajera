@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+html,
+body{
+    padding: relative;
+    height: 100%;
+
+}
+body{
+    background-color: #e5d9a0;
+    font-size: 14px;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper{
+    width: 100%;
+    padding: 150px 0 50px 0;
+}
+
+.swiper-slide {
+    width: 300px;
+    height: 500px;
+    background-color: #edc981;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    padding: 40px;
+    text-align: center;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.icons i{
+    font-size: 20px;
+    color: #000000;
+}
+
+.icons img{
+    width: 120px;
+}
+
+.product-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-txt{
+    flex-basis: 50%;
+    text-align: left;
+}
+
+.product-txt span{
+    font-size: 25px;
+    color: azure;
+    font-weight: bold;
+}
+
+.product-txt h3{
+    font-size: 20px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.product-txt p{
+    font-size: 14px;
+    color: #323232;
+}
+
+.product-img{
+    flex-basis: 50%;
+    text-align: right;
+} 
+
+.product-img img{
+    width: 170px;
+    height: 250px;
+}
+
+.btn-1{
+    display: inline-block;
+    padding: 13px 55px;
+    border: 1px solid #323232;
+    border-radius: 25px;
+    color: #323232;
+    text-decoration: none;
+    margin-top: 50px;
+}
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    header nav {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    header nav a {
+        margin: 10px 0;
+    }
+
+    #home .fila {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #home .fila .izq,
+    #home .fila .der {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    #home .fila .der h2 {
+        font-size: 30px;
+    }
+
+    #home .fila .der p {
+        font-size: 16px;
+    }
+
+    #home .fila .der .opciones {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #home .fila .der .contacto {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

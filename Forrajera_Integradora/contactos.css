@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand';
+}
+
+body {
+    background: linear-gradient(#e5d9a0, #edc981);
+    color: rgb(255, 255, 255);
+    height: 100vh;
+}
+
+header {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+header .logo h1 {
+    letter-spacing: 5px;
+}
+
+header .logo h3 {
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+
+header nav {
+    display: flex;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    margin: 0 20px;
+    padding-bottom: 10px;
+}
+
+.selected {
+    border-bottom: 3px solid #b50000;
+}
+
+header nav a:hover {
+    border-bottom: 3px solid #b50000;
+}
+
+section {
+    max-width: 1100px;
+    margin: auto;
+    border: 4px solid #b50000;
+    border-radius: 30px;
+    padding: 30px 0;
+}
+
+#home .fila {
+    display: flex;
+    padding: 20px;
+}
+
+#home .fila .izq {
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home .fila .izq img {
+    width: 80%;
+}
+
+#home .fila .der {
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#home .fila .der h2 {
+    font-size: 40px;
+}
+
+.destacado {
+    color: #b50000;
+}
+
+#home .fila .der p {
+    margin: 40px 0;
+    font-size: 14px;
+    color: #b50000;
+}
+
+#home .fila .der .opciones {
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+#home .fila .der .opciones a {
+    border-bottom: 4px solid #b50000;
+    padding-bottom: 6px;
+    text-decoration: none;
+    display: inline-block;
+    color: floralwhite;
+}
+
+#home .fila .der .opciones a:hover {
+   color: black;
+}
+
+#home .fila .der .contacto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#home .fila .der .contacto button {
+    border: none;
+    background-color: #b50000;
+    color: #fff;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#home .fila .der .contacto .redes a {
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 7px;
+    color: #fff;
+}
+
+#home .fila .der .contacto .redes a:hover {
+    color: #b50000;
+}
+
+#home .fila .der .contacto .direccion {
+    color: #fff;
+    font-size: 15px;
+}
+
+#home .fila .der .contacto .direccion:hover {
+    color: #b50000;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    header nav {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    header nav a {
+        margin: 10px 0;
+    }
+
+    #home .fila {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #home .fila .izq,
+    #home .fila .der {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    #home .fila .der h2 {
+        font-size: 30px;
+    }
+
+    #home .fila .der p {
+        font-size: 16px;
+    }
+
+    #home .fila .der .opciones {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #home .fila .der .contacto {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

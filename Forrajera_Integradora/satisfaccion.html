@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Satisfacción</title>
+    <link rel="stylesheet" href="satisfaccion.css">
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // Evita el envío tradicional del formulario
+
+            var form = document.getElementById('satisfaccion');
+            var formData = new FormData(form);
+
+            fetch('guardar_satisfaccion.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(result => {
+                alert('Gracias por tu calificación');
+                form.reset(); // Opcional: Limpia el formulario después de enviar
+            })
+            .catch(error => console.error('Error:', error));
+        }
+
+        function goBack() {
+            window.location.href = 'index.html'; // Redirige a index.html
+        }
+    </script>
+</head>
+<body>
+    <div id="contenedor">
+        <div id="central">
+            <div class="titulo">Satisfacción de Productos</div>
+            <form id="satisfaccion" onsubmit="handleSubmit(event)">
+                <label for="satisfaccion">Califica tu satisfacción del 1 al 5:</label>
+                <input type="number" id="satisfaccion" name="satisfaccion" min="1" max="5" required>
+
+                <label for="comentario">Comentario:</label>
+                <textarea id="comentario" name="comentario" rows="4" required></textarea>
+
+                <button type="submit">Enviar</button>
+                <button type="button" onclick="goBack()">Regresar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

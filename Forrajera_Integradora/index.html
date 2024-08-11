@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+    <title>Forrajera</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>BRYNDIS</h1>
+            <h3>Forrajera</h3>
+        </div>
+        <nav class="nav-links">
+            <a href="#" class="selected">Inicio</a>
+            <a href="contactos.html">Contacto</a>
+            <a href="productos.html">Productos</a>
+            <a href="satisfaccion.html">Calificanos!</a>
+            <a href="login.html">Admin</a>
+        </nav>
+    </header>
+    <section id="home">
+        <div class="fila">
+            <div class="izq">
+                <img src="imagenes/logo1.png" alt="">
+            </div>
+            <div class="der">
+                <h2>Ganadería sana</h2>
+                <h2 class="destacado">futuro próspero</h2>
+                <p>Su mejor opción en productos forrajeros de calidad, ofrecemos una amplia variedad de productos para el cuidado y alimentación del ganado.</p>
+                <div class="opciones">
+                    <span class="opcion">Soludrip</span>
+                    <span class="opcion">Vital</span>
+                    <span class="opcion">Vitare</span>
+                    <span class="opcion">Leaf</span>
+                </div>
+                <div  class="contacto">
+                    <button id="redirectButton">Ir a Productos</button>
+                    <script>
+                      document.getElementById('redirectButton').addEventListener('click', function() {
+                        window.location.href = 'productos.html';
+                      });
+                    </script>
+                    <div class="redes">
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <p class="direccion">Av La Palma No 125 Vista Hermosa</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
